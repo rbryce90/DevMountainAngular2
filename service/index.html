@@ -7,18 +7,17 @@
   <body>
     <div ng-controller="ctrl">
       <input ng-model="ctrlName"/>
-      <div><!--Display the second controller's name here--></div>
-      <button></button>
+      <button ng-click="send(ctrlName)">Ctrl 1</button>
     </div>
     <!-- How do we share data between the two controllers or pass data from one controller to the other -->
     <div ng-controller="ctrl2">
-      <input ng-model="ctrlName"/>
-      <div><!--Display the first controller's name here--></div>
-      <button></button>
+      <div>{{name}}</div>
+      <button ng-click="getStuff()">Ctrl 2</button>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="service.js"></script>
     <script src="ctrl.js"></script>
+    <script src="ctrl2.js"></script>
   </body>
 </html>
